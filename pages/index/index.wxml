@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="{{ selected == 'nightHeight'? 'weather-interval-selected night' : 'weather-interval night'}}"
+  bindtap	='bindTouchForNight' 
+  style="height:{{view.nightHeight}}px"
+  data-id="night">
+      <view class='weather-logo' wx:if="{{selected == 'nightHeight'}}" style="margin-top:{{halfForTwentyPercent}}px" data-id="night">
+        <image class="logo-cloud" src='../../images/云_橙.png' data-id="night"></image>
+        <image class="logo-thunder" src='../../images/闪电-实.png' data-id="night"></image>
+      </view>
+      <view class='weather-info' data-id="night">
+        <text  data-id="night" class="time-interval">NIGHT</text>
+        <text  data-id="night" class='temperature'>-9℃</text>
+        <text  data-id="night" class='title'>Thunder</text>
+        <text  data-id="night" class='detail'>Wind:W 5 mph</text>
+        <text  data-id="night" class='detail'>Humidity: 47%</text>
+      </view>
+  </view>
+  <view class="{{ selected == 'eveningHeight'? 'weather-interval-selected evening' : 'weather-interval evening'}}"
+  bindtap='bindTouchForEvening'
+  style="height:{{view.eveningHeight}}px"
+  data-id="evening">
+      <view class='weather-logo' wx:if="{{selected == 'eveningHeight'}}" style="margin-top:{{halfForTwentyPercent}}px" data-id="evening">
+        <image data-id="evening" class="logo-cloud" src='../../images/云_木.png'></image>
+        <image data-id="evening" class="logo-rain" src='../../images/水滴.png'></image>
+      </view>
+      <view class='weather-info' data-id="evening">
+        <text data-id="day" class="time-interval">EVENING</text>
+        <text data-id="evening" class='temperature'>5℃</text>
+        <text data-id="evening" class='title'>Rain</text>
+        <text data-id="evening" class='detail'>Wind:W 12 mph</text>
+        <text data-id="evening" class='detail'>Humidity: 45%</text>
+      </view>
+  </view>
+  <view class="{{ selected == 'dayHeight'? 'weather-interval-selected day' : 'weather-interval day'}}"
+  bindtap='bindTouchForDay'
+  style="height:{{view.dayHeight}}px"
+  data-id="day">
+      <view class='weather-logo' wx:if="{{selected == 'dayHeight'}}" style="margin-top:{{halfForTwentyPercent}}px" data-id="day">
+        <image data-id="day" class="logo-cloud-sun sun" src='../../images/晴天.png'></image>
+        <image data-id="day" class="logo-cloud" src='../../images/云_棕.png'></image>
+      </view>
+      <view data-id="day" class='weather-info'>
+        <text data-id="day" class="time-interval">DAY</text>
+        <text data-id="day" class='temperature'>12℃</text>
+        <text data-id="day" class='title'>Mostly Sunny</text>
+        <text data-id="day" class='detail'>Wind:N 5 mph</text>
+        <text data-id="day" class='detail'>Humidity: 45%</text>
+      </view>
+  </view>
+  <view class="{{ selected == 'morningHeight'? 'weather-interval-selected morning' : 'weather-interval morning'}}"
+  bindtap='bindTouchForMorning'
+  style="height:{{view.morningHeight}}px"
+  data-id="morning">
+      <view class='weather-logo' wx:if="{{selected == 'morningHeight'}}" style="margin-top:{{halfForTwentyPercent}}px" data-id="morning">
+        <image data-id="morning" class="logo-sun sun" src='../../images/晴天.png'></image>
+      </view>
+      <view data-id="morning" class='weather-info'>
+        <text data-id="morning" class="time-interval">MORNING</text>
+        <text data-id="morning" class='temperature'>1℃</text>
+        <text data-id="morning" class='title'>Sundy</text>
+        <text data-id="morning" class='detail'>Wind:W 7 mph</text>
+        <text data-id="morning" class='detail'>Humidity: 91%</text>
+      </view>
+  </view>
+</view>

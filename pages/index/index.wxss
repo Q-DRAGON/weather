@@ -1,0 +1,172 @@
+/**index.wxss**/
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.weather-interval {
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.4s linear;
+}
+
+ .weather-interval-selected {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.4s linear;
+} 
+
+.weather-interval.night {
+  overflow: hidden;
+}
+
+.weather-interval-selected.night {
+  overflow: hidden;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+  margin-right: 20px;
+  width: 40%;
+  justify-content:flex-start;
+  float: right;
+  color:aliceblue;
+  white-space:nowrap; 
+}
+
+.weather-info > .time-interval {
+  font-size: 16px;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+.weather-info .temperature {
+  font-size: 35px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.weather-info .title {
+  font-size: 24px;
+  margin-bottom: 6px;
+  font-weight: lighter;
+}
+
+.weather-info .detail {
+  font-size: 14px;
+}
+
+.morning {
+  width: 100%;
+  height: 100%;
+  background: #E3BB88;
+}
+
+.day {
+  width: 100%;
+  height: 80%;
+  background: #DB9864;
+  position: absolute;
+  bottom: 0;
+}
+
+.evening {
+  width: 100%;
+  height: 60%;
+  background: #b0695a;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.night {
+  width: 100%;
+  height: 40%;
+  background: #6c504a;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.weather-logo image {
+  width: 70px;
+  height: 70px;
+  transform: translateY(-50%);
+  margin-left: 30px;
+}
+
+.weather-logo .logo-cloud {
+  margin-top: 12px;
+  margin-left: 50px;
+  width: 90px;
+  height: 90px;
+}
+
+.weather-logo .logo-cloud-sun {
+ position: absolute;
+ left: 0px;
+}
+
+.weather-logo .logo-rain {
+  position: absolute;
+  left: 45px;
+  top: 120px;
+  width: 40px;
+  height: 40px;
+  animation: down 2s infinite;
+}
+
+.weather-logo .logo-thunder {
+  position: absolute;
+  left: 45px;
+  top: 124px;
+  width: 40px;
+  height: 40px;
+  animation: twinkle 0.8s infinite;
+}
+
+.weather-logo .sun {
+  animation: rotate 500s infinite;
+  transform: rotateZ(0deg);
+} 
+
+@keyframes twinkle {
+  0% {
+    opacity:0;
+  }
+  25% {
+    opacity:1;
+  }
+  50% {
+    opacity:0;
+  }
+  75% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-50%);
+    opacity:1;
+  }
+  100% {
+    transform: translateY(-0%);
+    opacity:0;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(-50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotateZ(54000deg);
+  }
+}
